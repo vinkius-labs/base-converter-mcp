@@ -2,7 +2,8 @@
 
 An enterprise-grade Model Context Protocol (MCP) server that empowers autonomous AI agents with mathematically precise radix and base conversions. By shifting mathematical transformations from probabilistic LLM inference to deterministic edge execution, we eliminate hallucination risks in low-level data processing.
 
-[![Deploy on Vinkius Cloud](https://img.shields.io/badge/Deploy%20on-Vinkius%20Cloud-blue?style=for-the-badge)](https://vinkius.com/mcp/base-converter)
+[![Deploy on Vinkius Edge](https://img.shields.io/badge/Deploy%20on-Vinkius%20Edge-blue?style=for-the-badge)](https://vinkius.com/mcp/deterministic-base-converter)
+[![Docker Pulls](https://img.shields.io/docker/pulls/vinkius/base-converter-mcp?style=for-the-badge&logo=docker&color=2496ed)](https://hub.docker.com/r/vinkius/base-converter-mcp)
 [![MCP Fusion Compatible](https://img.shields.io/badge/MCP%20Fusion-Strict%20Mode-success?style=for-the-badge)](https://www.npmjs.com/package/@mcpfusion/core)
 
 ## Why Offload Base Conversion from LLMs?
@@ -23,25 +24,29 @@ This server provides the following deterministic tool to your agents:
   * **Function**: Converts strings or numbers between specified bases (2, 8, 10, 16) and handles raw encoding formats like Base64.
   * **Use Case**: Ideal for cryptographic agents, network packet analysis, and low-level debugging where exact binary representation is non-negotiable.
 
-## Instant Edge Access via Vinkius Cloud
+## Instant Edge Access via Vinkius Edge
 
-For organizations requiring zero-downtime, globally distributed access to this MCP, we host a production-ready instance on **Vinkius Cloud**. 
+For organizations requiring zero-downtime, globally distributed access to this MCP, we host a production-ready instance on **Vinkius Edge**. 
 
-👉 **[Connect the Base Converter MCP to your AI](https://vinkius.com/mcp/base-converter)**
+👉 **[Connect the Base Converter MCP to your AI](https://vinkius.com/mcp/deterministic-base-converter)**
 
-Vinkius Cloud provides a secure V8 isolate sandbox, ensuring sub-50ms latency globally and complete operational isolation.
+Vinkius Edge provides a secure V8 isolate sandbox, ensuring sub-50ms latency globally and complete operational isolation.
 
-## Open-Source Development
+## Open-Source Development & Deployment
 
-Built on the robust [@mcpfusion/core](https://www.npmjs.com/package/@mcpfusion/core) framework, this project guarantees strict data validation and isolation. 
+Built on the robust [@mcpfusion/core](https://www.npmjs.com/package/@mcpfusion/core) framework, this project guarantees strict data validation and isolation. You can run it locally or deploy it to our global edge network.
 
+### 1. Free Edge Hosting (Recommended)
+You do not need to host this yourself! **Vinkius provides FREE, highly available edge hosting for MCP servers.** You can deploy this exact server in seconds to our globally distributed V8 isolate cloud:
+```bash
+npx mcpfusion deploy
+```
+*This command compiles your code and instantly deploys it to the Vinkius Edge, providing you with a live, secure URL to attach to your AI agents.*
+
+### 2. Local Development
+If you prefer to run and test this MCP server locally:
 ```bash
 npm install
 npm run build
 npm run dev
-```
-
-To deploy your own instance to the edge:
-```bash
-npx mcpfusion deploy
 ```
