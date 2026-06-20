@@ -43,5 +43,5 @@ npm run dev
 
 To deploy your own instance to the edge:
 ```bash
-npm run deploy
+npx mcpfusion deploy
 ```
